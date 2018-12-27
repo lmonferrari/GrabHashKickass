@@ -14,7 +14,6 @@ E:\C#\GrabHashKickass\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
 F:\C\GrabHashKickass\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
 F:\C\GrabHashKickass\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
 F:\C\GrabHashKickass\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
-F:\C\GrabHashKickass\WpfApp1\WpfApp1\obj\Debug\GraB!.csprojAssemblyReference.cache
 F:\C\GrabHashKickass\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
 F:\C\GrabHashKickass\WpfApp1\WpfApp1\obj\Debug\App.g.cs
 F:\C\GrabHashKickass\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache

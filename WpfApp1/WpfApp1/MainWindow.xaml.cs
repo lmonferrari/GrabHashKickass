@@ -16,14 +16,31 @@ namespace WpfApp1
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             var url = TextBoxUrl.Text;
+            string message = "You must enter a valid kickasstorrents.to url";
+            string title = "Invalid url";
 
-            if (!url.Contains("kickasstorrents.to")) return;
-
-            var getHtml = await GrabHtmlAsync(url);
-
-            if (getHtml.Contains("data-hash") || getHtml.Contains("Torrent hash: "))
+            if (!url.Contains("kickasstorrents.to"))
             {
-                 BypassHash(getHtml);
+                MessageBox.Show(message, title);
+                return;
+            }
+
+            try
+            {
+                var getHtml = await GrabHtmlAsync(url);
+
+                if (getHtml.Contains("data-hash") || getHtml.Contains("Torrent hash: "))
+                {
+                    BypassHash(getHtml);
+                }
+                else
+                {
+                    TextBoxUrl.Text = "Hash not found.";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
