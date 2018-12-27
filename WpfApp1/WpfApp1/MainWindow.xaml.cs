@@ -21,7 +21,7 @@ namespace WpfApp1
 
             var getHtml = await GrabHtmlAsync(url);
 
-            if (getHtml.Contains("data-hash"))
+            if (getHtml.Contains("data-hash") || getHtml.Contains("Torrent hash: "))
             {
                  BypassHash(getHtml);
             }
