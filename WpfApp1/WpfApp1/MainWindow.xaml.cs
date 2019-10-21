@@ -16,10 +16,11 @@ namespace WpfApp1
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             var url = TextBoxUrl.Text;
-            string message = "You must enter a valid kickasstorrents.to url";
+            string message = "You must enter a valid kickass url";
             string title = "Invalid url";
 
-            if (!url.Contains("kickasstorrents.to"))
+            if (!url.Contains("kickasstorrents.to") && !url.Contains("katcr.to") && !url.Contains("kat.am")
+                && !url.Contains("kat.ag") && !url.Contains("kickasstorrent.cr") && !url.Contains("katcr.co"))
             {
                 MessageBox.Show(message, title);
                 return;
@@ -29,7 +30,7 @@ namespace WpfApp1
             {
                 var getHtml = await GrabHtmlAsync(url);
 
-                if (getHtml.Contains("data-hash") || getHtml.Contains("Torrent hash: "))
+                if (getHtml.Contains("data-hash") || getHtml.Contains("Torrent hash: ") || getHtml.Contains("Infohash"))
                 {
                     BypassHash(getHtml);
                 }
@@ -47,12 +48,13 @@ namespace WpfApp1
         private async Task<String> GrabHtmlAsync(string url)
         {
             var webClient = new WebClient();
+            webClient.Headers.Add("User-Agent: Other");
             return await webClient.DownloadStringTaskAsync(url);
         }
 
         private void BypassHash(string html)
         {
-            Regex regex = new Regex(@"([A-Z\d]{40})");
+            Regex regex = new Regex(@"[A-Za-z\d]{40}");
 
             Match match = regex.Match(html);
 

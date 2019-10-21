@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="GraB!" Height="229.131" Width="707.415" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid>
+        Title="GraB!" Height="357.131" Width="707.415" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,0,-1">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="61*"/>
             <ColumnDefinition Width="23*"/>
@@ -16,6 +16,11 @@
         <Button Content="GraB!" HorizontalAlignment="Left" Margin="512,10,0,0" VerticalAlignment="Top" Width="75" Height="33" Grid.Column="2" Click="Button_Click" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5"/>
         <TextBox x:Name="TextBoxUrl" HorizontalAlignment="Left" Height="33" Margin="4,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="520" ForceCursor="True" Background="{x:Null}" Grid.ColumnSpan="2" Grid.Column="1"/>
         <TextBox x:Name="TextBoxHash" HorizontalAlignment="Left" Height="109" Margin="4,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="520" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Rectangle Grid.ColumnSpan="2" Grid.Column="1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="99" Margin="4,197,0,0" Stroke="Black" VerticalAlignment="Top" Width="520"/>
+        <Label Grid.ColumnSpan="2" Content="Supports:&#xD;&#xA;" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="17,206,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label Content="kickasstorrents.to, katcr.to, kat.am, kat.ag, kickasstorrent.cr, katcr.co&#xD;&#xA;" Grid.Column="2" HorizontalAlignment="Left" Margin="67,206,0,0" VerticalAlignment="Top" Width="412"/>
+        <Label Content="Usage: " Grid.Column="1" HorizontalAlignment="Left" Margin="17,236,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label Content="Go to site, choose the page of torrent, copy and paste the link above &#xD;&#xA;and click grab to see the hash&#xD;&#xA;" Grid.Column="2" HorizontalAlignment="Left" Margin="67,236,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,-0.615" Width="424" Height="48"/>
 
     </Grid>
 </Window>

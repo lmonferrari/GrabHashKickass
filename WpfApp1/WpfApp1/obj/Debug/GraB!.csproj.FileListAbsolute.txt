@@ -25,3 +25,4 @@ F:\C\GrabHashKickass\WpfApp1\WpfApp1\obj\Debug\GraB!.csproj.GenerateResource.cac
 F:\C\GrabHashKickass\WpfApp1\WpfApp1\obj\Debug\GraB!.csproj.CoreCompileInputs.cache
 F:\C\GrabHashKickass\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
 F:\C\GrabHashKickass\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+F:\C\GrabHashKickass\WpfApp1\WpfApp1\obj\Debug\GraB!.csprojAssemblyReference.cache
